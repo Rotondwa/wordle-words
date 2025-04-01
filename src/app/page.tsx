@@ -70,7 +70,7 @@ export default function Home() {
         const response = await fetch("/api/wordle-words");
         const apiData = await response.json();
         const randomWord = apiData[Math.floor(Math.random() * apiData.length)];
-        setRandomWord(randomWord);
+        setRandomWord(randomWord.toLowerCase());
       } catch (error) {
         console.error("Error fetching word list:", error);
       }
