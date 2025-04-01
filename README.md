@@ -1,8 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wordle Clone
+
+A modern implementation of the popular word-guessing game Wordle, built with Next.js and TypeScript.
+
+## Features
+
+- 5-letter word guessing game
+- 6 attempts to guess the correct word
+- Real-time keyboard input
+- Modern, responsive UI with Tailwind CSS
+- Server-side word selection to prevent cheating
+
+## How to Play
+
+1. Start the game by typing your first 5-letter word guess
+2. Press Enter to submit your guess
+3. Use Backspace to delete letters
+4. You have 6 attempts to guess the correct word
+5. The game ends when you either:
+   - Guess the correct word
+   - Run out of attempts
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +40,26 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to start playing!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technical Details
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Built with Next.js 14 and TypeScript
+- Uses the App Router for modern Next.js features
+- Styled with Tailwind CSS
+- Word list fetched from Frontend Expert API
+- Server-side API route to handle CORS and word selection
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+The project structure is organized as follows:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/page.tsx` - Main game component
+- `src/app/api/wordle-words/route.ts` - API route for word selection
+- `src/app/globals.css` - Global styles and Tailwind configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
